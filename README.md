@@ -1,2 +1,2 @@
 # dot-files
-a bunch of config and dot files
+my .Vimrc Config file.
