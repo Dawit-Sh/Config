@@ -28,7 +28,6 @@ call plug#begin('~/.vim/plugged')
 
 
 "{{ The Basics }}"
-    Plug 'fatih/vim-go'                                " Go-Plugin
     Plug 'townk/vim-autoclose'                         " Autoclose
     Plug 'gmarik/Vundle.vim'                           " Vundle
     Plug 'itchyny/lightline.vim'                       " Lightline statusbar
