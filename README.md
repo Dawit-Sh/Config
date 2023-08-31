@@ -16,7 +16,7 @@
 
 ## How To Use
 
-Download the Vim Like Me script using 
+Download the Vim Like Me script raw from this repository.
 From your command line:
 
 ```bash
