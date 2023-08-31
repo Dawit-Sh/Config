@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">A minimal Bash Sript that setsup my vim configuration on any linux machine.</h4>
+<h4 align="center">A minimal Bash Sript that replicates my vim configuration on any linux machine.</h4>
 
 
 <p align="center">
