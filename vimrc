@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'                       " Lightline statusbar
     Plug 'suan/vim-instant-markdown', {'rtp': 'after'} " Markdown Preview
     Plug 'frazrepo/vim-rainbow'
+    Plug 'wakatime/vim-wakatime'
 "{{ File management }}
     Plug 'vifm/vifm.vim'                               " Vifm
     Plug 'scrooloose/nerdtree'                         " Nerdtree
@@ -203,8 +204,11 @@ map <c-h> <c-w>h
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree Toogle
+map <Leader>s :NERDTreeToggle<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Sort Function
-vnoremap <Leader>s :sort<CR>
+vnoremap <Leader>S :sort<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Moving Code-Blocks
 vnoremap < <gv 
