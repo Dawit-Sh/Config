@@ -16,7 +16,7 @@ if command -v $gc $ve
 then
     echo "Mission is a Go!"
     rm -rf $check
-    curl --silent https://raw.githubusercontent.com/Dawit-Sh/Vimrc/main/vimrc >> vimrc 
+    curl --silent https://raw.githubusercontent.com/Dawit-Sh/Config/main/vimrc >> vimrc 
     mv vimrc .vimrc && mv .vimrc ~
     curl --silent -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -26,7 +26,7 @@ then
     exit 0
 else 
     sudo $packm update >> update.log && sudo $packm install -y git vim >> install.log
-    curl --silent https://raw.githubusercontent.com/Dawit-Sh/Vimrc/main/vimrc >> vimrc 
+    curl --silent https://raw.githubusercontent.com/Dawit-Sh/Config/main/vimrc >> vimrc 
     mv vimrc .vimrc
     mv .vimrc ~
     curl --silent -fLo ~/.vim/autoload/plug.vim --create-dirs \
