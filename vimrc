@@ -214,4 +214,4 @@ vnoremap <Leader>S :sort<CR>
 vnoremap < <gv 
 vnoremap > >gv
 """""""""""""""""""""""""""""""""""""""""""""""""'
-
+highlight LineNr ctermfg=white
