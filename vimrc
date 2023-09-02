@@ -194,10 +194,10 @@ noremap <Leader>e :quit<CR>
 noremap <Leader>E :qa!<CR>   
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Bind Ctrl+<movement> keys to move around the windows
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+map <Leader>j <c-w>j
+map <Leader>k <c-w>k
+map <Leader>l <c-w>l
+map <Leader>h <c-w>h
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
