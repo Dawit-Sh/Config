@@ -199,11 +199,6 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set window navigation to leader j k h l 
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
-nnoremap <leader>h <C-w>h
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
