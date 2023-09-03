@@ -205,6 +205,7 @@ map <Leader>h <c-w>h
 " Easier Moving Between tabs.
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
+map <Leader>b <esc>:tabnew<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Shortuct
 map <Leader>s :NERDTreeToggle<CR>
