@@ -31,9 +31,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'townk/vim-autoclose'                         " Autoclose
     Plug 'gmarik/Vundle.vim'                           " Vundle
     Plug 'itchyny/lightline.vim'                       " Lightline statusbar
-    Plug 'suan/vim-instant-markdown', {'rtp': 'after'} " Markdown Preview
+    Plug 'suan/vim-instant-markdown'                   " Markdown Preview
     Plug 'frazrepo/vim-rainbow'
     Plug 'wakatime/vim-wakatime'
+    Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 "{{ File management }}
     Plug 'vifm/vifm.vim'                               " Vifm
     Plug 'scrooloose/nerdtree'                         " Nerdtree
@@ -215,6 +216,10 @@ nnoremap <S-m> :n<CR>
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 map <Leader>b <esc>:tabnew<CR>
+"""""""""""""""""""""""""""""""""""""
+" move among buffers with CTRL
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR> 
 """""""""""""""""""""""""""""""""""
 " Opening the Terminal 
 map <Leader>t <esc>:term<CR>
