@@ -44,7 +44,11 @@ call plug#begin('~/.vim/plugged')
 "{{ Syntax Highlighting and Colors }}
     Plug 'kovetskiy/sxhkd-vim'                         " sxhkd highlighting
     Plug 'vim-python/python-syntax'                    " Python highlighting
-
+"{{ LSP }
+    Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'mattn/vim-lsp-settings'
+    Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 
 filetype plugin indent on    " required
