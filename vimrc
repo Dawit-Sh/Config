@@ -52,6 +52,20 @@ call plug#begin('~/.vim/plugged')
     Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 
+" VUNDLE PACKAGE MANAGER 
+
+call vundle#begin()
+
+" Let Vundle Manage Itself 
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins 
+Plugin 'jiangmiao/auto-pairs'
+
+
+call vundle#end()
+
+
 filetype plugin indent on    " required
 
 
@@ -207,8 +221,8 @@ map <Leader>h <c-w>h
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Switch between vim sessions 
-nnoremap <S-n> :N<CR>
-nnoremap <S-m> :n<CR>
+nnoremap <S-l> :N<CR>
+nnoremap <S-k> :n<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
