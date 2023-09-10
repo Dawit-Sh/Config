@@ -34,7 +34,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'suan/vim-instant-markdown'                   " Markdown Preview
     Plug 'frazrepo/vim-rainbow'
     Plug 'wakatime/vim-wakatime'
-    Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 "{{ File management }}
     Plug 'vifm/vifm.vim'                               " Vifm
     Plug 'scrooloose/nerdtree'                         " Nerdtree
