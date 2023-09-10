@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'     " Highlighting Nerdtree
     Plug 'ryanoasis/vim-devicons'                      " Icons for Nerdtree
 "{{ Productivity }}
+    Plug 'brooth/far.vim'
     Plug 'vimwiki/vimwiki'                             " VimWiki 
 "{{ Syntax Highlighting and Colors }}
     Plug 'kovetskiy/sxhkd-vim'                         " sxhkd highlighting
