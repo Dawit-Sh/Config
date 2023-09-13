@@ -22,7 +22,7 @@ then
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     echo
     echo "Dear $usrr, Vim with Night King config has been successfully installed"
-    echo "$usrr, run :PlugInstall on the first Vim run to get the plugins working"
+    echo "The Vimrc Uses Vunlde and Vim-Plug to handle plugins"
     exit 0
 else 
     sudo $packm update >> update.log && sudo $packm install -y git vim >> install.log
@@ -34,6 +34,6 @@ else
     rm -rf install.log update.log 
     echo
     echo "Dear $usrr, Vim with Night King config has been successfully installed"
-    echo "$usrr, run :PlugInstall on the first Vim run to get the plugins working"
+    echo "The Vimrc Uses Vunlde and Vim-Plug to handle plugins"
     exit 0
 fi 

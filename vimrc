@@ -61,6 +61,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins 
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tibabit/vim-templates'
 
 
 call vundle#end()
@@ -238,9 +239,10 @@ map <C-K> :bprev<CR>
 " Opening the Terminal 
 map <Leader>t <esc>:term<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""
-
-" NERDTree Shortuct
+" EXTENSION'S Shortuct
+map <Leader>q :TemplateInit<CR>
 map <Leader>s :NERDTreeToggle<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Sort Function
 vnoremap <Leader>S :sort<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
