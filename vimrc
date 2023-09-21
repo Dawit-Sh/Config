@@ -31,7 +31,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'townk/vim-autoclose'                         " Autoclose
     Plug 'gmarik/Vundle.vim'                           " Vundle
     Plug 'itchyny/lightline.vim'                       " Lightline statusbar
-    Plug 'suan/vim-instant-markdown'                   " Markdown Preview
     Plug 'frazrepo/vim-rainbow'
     Plug 'wakatime/vim-wakatime'
 "{{ File management }}
