@@ -36,7 +36,7 @@ GNU General Public License v3.0
 
 <h1 align="center">
   <br>
-  Alacritty.
+  Kitty.
   <br>
 </h1>
 
@@ -45,11 +45,10 @@ GNU General Public License v3.0
 
 ## How I Use It
 
-- download the raw alacritty.yml file curl or wget it, or even use the download button from github.
-- save it to ~/.config/alacritty.yml
+- download the raw Kitty.conf file curl or wget it, or even use the download button from github.
+- save it to ~/.config/kitty/kitty.conf
 - Download [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip) , then move the *.ttf* files to ~/.fonts
 - install **picom** using your package manager
-- install alacritty themes [alacritty/alacritty-theme: Collection of Alacritty color schemes](https://github.com/alacritty/alacritty-theme)
 - install [Zap](https://www.zapzsh.org/)
 
 **NOTE**
