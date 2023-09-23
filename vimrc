@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'                       " Lightline statusbar
     Plug 'frazrepo/vim-rainbow'
     Plug 'wakatime/vim-wakatime'
+    Plug 'Eliot00/git-lens.vim'
 "{{ File management }}
     Plug 'vifm/vifm.vim'                               " Vifm
     Plug 'scrooloose/nerdtree'                         " Nerdtree
@@ -184,6 +185,7 @@ set fillchars+=vert:\
 " => Other Stuff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:python_highlight_all = 1
+let g:GIT_LENS_ENABLED = 1 
 
 au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
 au BufEnter *.org            call org#SetOrgFileType()
@@ -241,6 +243,7 @@ map <Leader>t <esc>:term<CR>
 " EXTENSION'S Shortuct
 map <Leader>q :TemplateInit<CR>
 map <Leader>s :NERDTreeToggle<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 "Sort Function
 vnoremap <Leader>S :sort<CR>
