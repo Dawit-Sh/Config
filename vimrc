@@ -34,6 +34,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'frazrepo/vim-rainbow'
     Plug 'wakatime/vim-wakatime'
     Plug 'Eliot00/git-lens.vim'
+    Plug 'junegunn/goyo.vim', {'for': 'markdown' } 
 "{{ File management }}
     Plug 'vifm/vifm.vim'                               " Vifm
     Plug 'scrooloose/nerdtree'                         " Nerdtree
