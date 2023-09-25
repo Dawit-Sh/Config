@@ -200,7 +200,24 @@ set guioptions-=L  "remove left-hand scroll bar
 "=> ClipBoard
 set clipboard=unnamed
 """""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+"Goyo Functions 
 
+function! s:goyo_enter()
+    set linebreak 
+    set spell spelllang=en_us
+endfunction 
+
+function! s:goyo_leave()
+    set nolinebreak
+    set nospell
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "=> Quick-Save Commands.
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -255,3 +272,4 @@ vnoremap < <gv
 vnoremap > >gv
 """""""""""""""""""""""""""""""""""""""""""""""""'
 highlight LineNr ctermfg=white
+highlight SpellBad cterm=underline 
