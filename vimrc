@@ -244,6 +244,7 @@ map <Leader>t <esc>:term<CR>
 " EXTENSION'S Shortuct
 map <Leader>q :TemplateInit<CR>
 map <Leader>s :NERDTreeToggle<CR>
+map <Leader>g :Goyo<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 "Sort Function
