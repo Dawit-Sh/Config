@@ -140,9 +140,9 @@ highlight Function         ctermfg=1    ctermbg=none    cterm=none
 " highlight SignColumn       ctermfg=244     ctermbg=235     cterm=none
 " highlight Conceal          ctermfg=251     ctermbg=none    cterm=none
 highlight SpellBad         ctermfg=168     ctermbg=none    cterm=underline
-" highlight SpellCap         ctermfg=80      ctermbg=none    cterm=underline
-" highlight SpellRare        ctermfg=121     ctermbg=none    cterm=underline
-" highlight SpellLocal       ctermfg=186     ctermbg=none    cterm=underline
+highlight SpellCap         ctermfg=80      ctermbg=none    cterm=underline
+highlight SpellRare        ctermfg=121     ctermbg=none    cterm=underline
+highlight SpellLocal       ctermfg=186     ctermbg=none    cterm=underline
 " highlight Pmenu            ctermfg=251     ctermbg=234     cterm=none
 " highlight PmenuSel         ctermfg=0       ctermbg=111     cterm=none
 " highlight PmenuSbar        ctermfg=206     ctermbg=235     cterm=none
