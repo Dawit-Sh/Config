@@ -139,7 +139,7 @@ highlight Function         ctermfg=1    ctermbg=none    cterm=none
 " highlight DiffText         ctermfg=0       ctermbg=80      cterm=none
 " highlight SignColumn       ctermfg=244     ctermbg=235     cterm=none
 " highlight Conceal          ctermfg=251     ctermbg=none    cterm=none
-" highlight SpellBad         ctermfg=168     ctermbg=none    cterm=underline
+highlight SpellBad         ctermfg=168     ctermbg=none    cterm=underline
 " highlight SpellCap         ctermfg=80      ctermbg=none    cterm=underline
 " highlight SpellRare        ctermfg=121     ctermbg=none    cterm=underline
 " highlight SpellLocal       ctermfg=186     ctermbg=none    cterm=underline
@@ -272,4 +272,4 @@ vnoremap < <gv
 vnoremap > >gv
 """""""""""""""""""""""""""""""""""""""""""""""""'
 highlight LineNr ctermfg=white
-highlight SpellBad cterm=underline 
+highlight SpellBad cterm=underline,bold  
