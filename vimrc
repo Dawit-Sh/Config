@@ -47,6 +47,7 @@ call plug#begin('~/.vim/plugged')
 "{{ Syntax Highlighting and Colors }}
     Plug 'kovetskiy/sxhkd-vim'                         " sxhkd highlighting
     Plug 'vim-python/python-syntax'                    " Python highlighting
+    Plug 'kshenoy/vim-signature'
 "{{ LSP }
     Plug 'prabirshrestha/asyncomplete.vim'
     Plug 'prabirshrestha/vim-lsp'
@@ -132,8 +133,8 @@ highlight String           ctermfg=12   ctermbg=none    cterm=none
 highlight Number           ctermfg=1    ctermbg=none    cterm=none
 highlight Function         ctermfg=1    ctermbg=none    cterm=none
 " highlight WildMenu         ctermfg=0       ctermbg=80      cterm=none
-" highlight Folded           ctermfg=103     ctermbg=234     cterm=none
-" highlight FoldColumn       ctermfg=103     ctermbg=234     cterm=none
+highlight Folded           ctermfg=103     ctermbg=234     cterm=none
+highlight FoldColumn       ctermfg=103     ctermbg=234     cterm=none
 " highlight DiffAdd          ctermfg=none    ctermbg=23      cterm=none
 " highlight DiffChange       ctermfg=none    ctermbg=56      cterm=none
 " highlight DiffDelete       ctermfg=168     ctermbg=96      cterm=none
@@ -233,7 +234,15 @@ noremap <C-Z> :update<CR>
 vnoremap <C-Z> <C-C>:update<CR>     
 inoremap <C-Z> <C-O>:update<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
-
+" Folds
+nnoremap <CR> za <CR>
+" Remember Folds
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Quick-Quit Commands.
 """""""""""""""""""""""""""""""
