@@ -235,7 +235,7 @@ vnoremap <C-Z> <C-C>:update<CR>
 inoremap <C-Z> <C-O>:update<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Folds
-nnoremap <CR> za <CR>
+nnoremap <space> za <CR>
 " Remember Folds
 augroup remember_folds
   autocmd!
@@ -275,24 +275,16 @@ map <C-K> :bprev<CR>
 map <Leader>t <esc>:term<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " EXTENSION'S Shortuct
-map <Leader>q :TemplateInit<CR>                   " Create a template 
-map <Leader>s :NERDTreeToggle<CR>                 " Open/Close Nerd Tree 
-map <Leader>g :Goyo<CR>                           " Enter Goyo 
-map <Leader>p :MarkdownPreview<CR>                " Starts Markdown Preview 
-map <leader>ps :MarkdownPreviewStop<CR>           " Stops Markdown Preview
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>q :TemplateInit<CR>                    
+map <Leader>s :NERDTreeToggle<CR>                  
+map <Leader>g :Goyo<CR>                           
+map <Leader>p :MarkdownPreview<CR>                 
+map <leader>ps :MarkdownPreviewStop<CR>           
+""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 "Sort Function
 vnoremap <Leader>S :sort<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"Insert above or below line 
-map <Enter> o<ESC>     " Insert Below line 
-map <S-Enter> O<ESC>   " Insert Above line 
-
-"""""""""""""""""""""""""""""""""""
-
 " Moving Code-Blocks
 vnoremap < <gv 
 vnoremap > >gv
