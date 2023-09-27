@@ -34,7 +34,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'frazrepo/vim-rainbow'
     Plug 'wakatime/vim-wakatime'
     Plug 'Eliot00/git-lens.vim'
-    Plug 'junegunn/goyo.vim', {'for': 'markdown' } 
+    Plug 'junegunn/goyo.vim', {'for': 'markdown' }
+   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 "{{ File management }}
     Plug 'vifm/vifm.vim'                               " Vifm
     Plug 'scrooloose/nerdtree'                         " Nerdtree
@@ -213,9 +214,15 @@ function! s:goyo_leave()
     set nospell
 endfunction
 
+
+function! s:goyo_leave()
+    quit!
+endfunction
+
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
+autocmd vimenter *.md Goyo
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -259,10 +266,13 @@ map <C-K> :bprev<CR>
 map <Leader>t <esc>:term<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " EXTENSION'S Shortuct
-map <Leader>q :TemplateInit<CR>
-map <Leader>s :NERDTreeToggle<CR>
-map <Leader>g :Goyo<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>q :TemplateInit<CR>                   " Create a template 
+map <Leader>s :NERDTreeToggle<CR>                 " Open/Close Nerd Tree 
+map <Leader>g :Goyo<CR>                           " Enter Goyo 
+map <Leader>p :MarkdownPreview<CR>                " Starts Markdown Preview 
+map <leader>ps :MarkdownPreviewStop<CR>           " Stops Markdown Preview
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 "Sort Function
 vnoremap <Leader>S :sort<CR>
@@ -272,4 +282,3 @@ vnoremap < <gv
 vnoremap > >gv
 """""""""""""""""""""""""""""""""""""""""""""""""'
 highlight LineNr ctermfg=white
-highlight SpellBad cterm=underline,bold  
