@@ -215,15 +215,8 @@ function! s:goyo_leave()
     set nospell
 endfunction
 
-
-function! s:goyo_leave()
-    quit!
-endfunction
-
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "=> Quick-Save Commands.
@@ -235,12 +228,6 @@ inoremap <C-Z> <C-O>:update<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Folds
 nnoremap <space> za <CR>
-" Remember Folds
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 " Quick-Quit Commands.
