@@ -235,7 +235,7 @@ vnoremap <C-Z> <C-C>:update<CR>
 inoremap <C-Z> <C-O>:update<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Folds
-nnoremap <CR> za <CR>
+nnoremap <space> za <CR>
 " Remember Folds
 augroup remember_folds
   autocmd!
