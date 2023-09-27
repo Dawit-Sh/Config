@@ -286,8 +286,16 @@ map <leader>ps :MarkdownPreviewStop<CR>           " Stops Markdown Preview
 "Sort Function
 vnoremap <Leader>S :sort<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Insert above or below line 
+map <Enter> o<ESC>     " Insert Below line 
+map <S-Enter> O<ESC>   " Insert Above line 
+
+"""""""""""""""""""""""""""""""""""
+
 " Moving Code-Blocks
 vnoremap < <gv 
 vnoremap > >gv
 """""""""""""""""""""""""""""""""""""""""""""""""'
 highlight LineNr ctermfg=white
+
