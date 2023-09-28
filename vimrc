@@ -41,6 +41,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'                         " Nerdtree
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'     " Highlighting Nerdtree
     Plug 'ryanoasis/vim-devicons'                      " Icons for Nerdtree
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 "{{ Productivity }}
     Plug 'brooth/far.vim'
     Plug 'vimwiki/vimwiki'                             " VimWiki 
@@ -180,12 +182,11 @@ function! VimwikiSearchTagsPrompt()
   " Call :VimwikiSearchTags with the user-provided tags
   execute ":VimwikiSearchTags " . tags
 endfunction
-map <leader>r :VimwikiRebuildTags<CR>
-map <leader>2 :lnext<CR>
-map <leader>1 :lprevious<CR>
-map <leader>o :lopen<CR>
+nnoremap <leader>r :VimwikiRebuildTags<CR>
+nnoremap <leader>2 :lnext<CR>
+nnoremap <leader>1 :lprevious<CR>
+nnoremap <leader>o :lopen<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -270,20 +271,19 @@ nnoremap <S-k> :n<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Easier Moving Between tabs.
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
-map <Leader>b <esc>:tabnew<CR>
+nnoremap <Leader>n <esc>:tabprevious<CR>
+nnoremap <Leader>m <esc>:tabnext<CR>
+nnoremap <Leader>b <esc>:tabnew<CR>
 """""""""""""""""""""""""""""""""""""
-" move among buffers with CTRL
-map <C-J> :bnext<CR>
-map <C-K> :bprev<CR> 
 """""""""""""""""""""""""""""""""""
 " EXTENSION'S Shortuct
-map <Leader>q :TemplateInit<CR>                    
-map <Leader>s :NERDTreeToggle<CR>                  
-map <Leader>g :Goyo<CR>                           
-map <Leader>p :MarkdownPreview<CR>                 
-map <leader>ps :MarkdownPreviewStop<CR>           
+nnoremap <Leader>q :TemplateInit<CR>                    
+nnoremap <Leader>s :NERDTreeToggle<CR>                  
+nnoremap <Leader>g :Goyo<CR>                           
+nnoremap <Leader>p :MarkdownPreview<CR>                 
+nnoremap <leader>ps :MarkdownPreviewStop<CR>           
+nnoremap <c-f> :Files<CR>
+nnoremap <c-b> :Buffers<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 "Sort Function
