@@ -164,7 +164,7 @@ highlight SpellLocal       ctermfg=186     ctermbg=none    cterm=underline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VimWiki
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:vimwiki_list = [{'path': '~/Notes/vimwiki/',
+let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 nnoremap <leader>t :call VimwikiSearchTagsPrompt()<CR>
