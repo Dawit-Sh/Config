@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+commitM=$(git commit -m 'Vimrc Update')
+
+cp .vimrc /home/nk/Programming/Projects/Config
+cd /home/nk/Programming/Projects/Config
+trash vimrc
+mv .vimrc vimrc 
+git add .
+git commit -m 'Vimrc Update'
+git push
