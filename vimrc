@@ -167,6 +167,21 @@ highlight SpellLocal       ctermfg=186     ctermbg=none    cterm=underline
 let g:vimwiki_list = [{'path': '~/Notes/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
+nnoremap <leader>t :call VimwikiSearchTagsPrompt()<CR>
+function! VimwikiSearchTagsPrompt()
+  " Ask the user for the tags to search for
+  let tags = input("Search For: ")
+  " If the user cancels the input, return
+  if tags == ""
+    return
+  endif
+  " Call :VimwikiSearchTags with the user-provided tags
+  execute ":VimwikiSearchTags " . tags
+endfunction
+map <leader>r :VimwikiRebuildTags<CR>
+map <leader>2 :lnext<CR>
+map <leader>1 :lprevious<CR>
+map <leader>o :lopen<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -257,9 +272,6 @@ map <Leader>b <esc>:tabnew<CR>
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR> 
 """""""""""""""""""""""""""""""""""
-" Opening the Terminal 
-map <Leader>t <esc>:term<CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""""
 " EXTENSION'S Shortuct
 map <Leader>q :TemplateInit<CR>                    
 map <Leader>s :NERDTreeToggle<CR>                  
