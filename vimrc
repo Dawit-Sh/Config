@@ -65,6 +65,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugins 
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tibabit/vim-templates'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 
 call vundle#end()
@@ -233,7 +235,11 @@ endfunction
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""
+"Ultisnip
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Quick-Save Commands.
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Allows you to save using CTRL+Z in visual & Insert mode.
