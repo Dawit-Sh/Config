@@ -250,6 +250,11 @@ inoremap <C-Z> <C-O>:update<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Folds
 nnoremap <space> za <CR>
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 " Quick-Quit Commands.
