@@ -43,13 +43,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'ryanoasis/vim-devicons'                      " Icons for Nerdtree
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'tpope/vim-fugitive'
 "{{ Productivity }}
     Plug 'brooth/far.vim'
     Plug 'vimwiki/vimwiki'                             " VimWiki 
 "{{ Syntax Highlighting and Colors }}
     Plug 'kovetskiy/sxhkd-vim'                         " sxhkd highlighting
     Plug 'vim-python/python-syntax'                    " Python highlighting
-    Plug 'kshenoy/vim-signature'
 "{{ LSP }
     Plug 'prabirshrestha/asyncomplete.vim'
     Plug 'prabirshrestha/vim-lsp'
