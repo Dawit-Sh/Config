@@ -1,0 +1,11 @@
+{
+  "defaultTitle": false,
+  "boldText": true,
+  "markup": "markdown",
+  "level": 3,
+  "cstTime": "",
+  "padHour": true,
+  "KeyboardShortcut_l": "mod+t",
+  "KeyboardShortcut_h": "mod+shift+t",
+  "disabled": false
+}

@@ -1,0 +1,26 @@
+{
+  "theme": {
+    "name": "Ozean Theme",
+    "url": "assets:///home/nk/.logseq/plugins/logseq-ozean-theme/main.css",
+    "pid": "logseq-ozean-theme"
+  },
+  "themes": {
+    "mode": "dark",
+    "light": {
+      "name": "Tenset light",
+      "url": "assets:///home/nk/.logseq/plugins/logseq-tenset-theme/tenset-theme.css",
+      "description": "Beautiful light theme made for smart contract auditors",
+      "mode": "light",
+      "pid": "logseq-tenset-theme",
+      "selected": false
+    },
+    "dark": {
+      "name": "Monokai theme",
+      "url": "assets:///home/nk/.logseq/plugins/logseq-monokai/custom.css",
+      "description": "A dark theme for Logseq inspired by Monokai and Dracula.",
+      "mode": "dark",
+      "pid": "logseq-monokai"
+    }
+  },
+  "externals": []
+}

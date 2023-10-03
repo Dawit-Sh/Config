@@ -1,0 +1,15 @@
+{
+  "tn1": "fleeting",
+  "tc1": "#ff0000",
+  "tn2": "random",
+  "tc2": "#ff38d4",
+  "tn3": "techtips",
+  "tc3": "#fbff00",
+  "tn4": "quotes",
+  "tc4": "#001eff",
+  "tn5": "snips",
+  "tc5": "#52b4ff",
+  "tn6": "idea",
+  "tc6": "#2bff00",
+  "disabled": false
+}
