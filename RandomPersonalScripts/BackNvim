@@ -1,0 +1,8 @@
+#!/bin/bash 
+
+cd /home/nk/.config
+cp -rf nvim /home/nk/Programming/Projects/Config
+cd /home/nk/Programming/Projects/Config
+git add . 
+git commit -m 'Update config'
+git push 
