@@ -16,7 +16,7 @@ vim.g.mapleader = " "
 --   command_mode = "c",
 -- from vim 
 keymap("n", "<leader>e", ":q<CR>")
-keymap("n", "<leader>E", ":qa<CR>")
+keymap("n", "<leader>E", ":qa!<CR>")
 keymap("n", "<C-z>", ":w<CR>")
 -- End 
 
