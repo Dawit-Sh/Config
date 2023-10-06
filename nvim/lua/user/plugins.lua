@@ -70,6 +70,7 @@ return packer.startup(function(use)
   use { "folke/tokyonight.nvim" }
   use { "lunarvim/darkplus.nvim" }
   use { "ellisonleao/gruvbox.nvim" }
+  use { "rebelot/kanagawa.nvim" }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp"} -- The completion plugin
@@ -148,23 +149,50 @@ return packer.startup(function(use)
   use { 'nvim-pack/nvim-spectre' }
 
   -- note taking 
- use {
-    'vimwiki/vimwiki',
+-- use {
+--    'vimwiki/vimwiki',
+--    config = function()
+--      vim.g.vimwiki_list = {
+--        {
+--          path = '~/vimwiki/',
+--          syntax = 'markdown',
+--          ext  = '.md',
+--        }
+--      }
+--      vim.g.vimwiki_ext2syntax = {
+--        ['.md'] = 'markdown',
+--        ['.markdown'] = 'markdown',
+--        ['.mdown'] = 'markdown',
+--      }
+--    end
+--  } 
+
+  use {
+    "nvim-neorg/neorg",
     config = function()
-      vim.g.vimwiki_list = {
-        {
-          path = '~/vimwiki/',
-          syntax = 'markdown',
-          ext  = '.md',
+        require('neorg').setup {
+            load = {
+                ["core.summary"] = {}, -- to generate summary 
+                ["core.export.markdown"] = {}, 
+                ["core.defaults"] = {}, -- Loads default behaviour
+                ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                ["core.dirman"] = { -- Manages Neorg workspaces
+                    config = {
+                        workspaces = {
+                            notes = "~/notes",
+                        },
+                        default_workspace = "notes",
+                    },
+                },
+            },
         }
-      }
-      vim.g.vimwiki_ext2syntax = {
-        ['.md'] = 'markdown',
-        ['.markdown'] = 'markdown',
-        ['.mdown'] = 'markdown',
-      }
-    end
-  } 
+    end,
+    run = ":Neorg sync-parsers",
+    requires = "nvim-lua/plenary.nvim",
+}
+vim.opt.conceallevel=3
+
+
   -- Writing 
   use { "junegunn/goyo.vim" }
   -- git lense 
