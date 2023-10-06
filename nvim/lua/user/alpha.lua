@@ -18,11 +18,12 @@ dashboard.section.buttons.val = {
   dashboard.button("p", " " .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
   dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
   dashboard.button("t", " " .. " Find text", ":Telescope live_grep <CR>"),
+  dashboard.button("w", "📖" .. " Vim Wiki", ":e ~/vimwiki/index.md <CR>"),
   dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
   dashboard.button("q", " " .. " Quit", ":qa<CR>"),
 }
 local function footer()
-  return "chrisatmachine.com"
+  return "Dawit-Sh"
 end
 
 dashboard.section.footer.val = footer()

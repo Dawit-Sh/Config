@@ -14,11 +14,12 @@ vim.g.mapleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
--- Dave 
+-- from vim 
 keymap("n", "<leader>e", ":q<CR>")
 keymap("n", "<leader>E", ":qa<CR>")
 keymap("n", "<C-z>", ":w<CR>")
 -- End 
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -60,10 +61,10 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<leader>s", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>f", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>p", ":Telescope projects<CR>", opts)
+keymap("n", "<leader>b", ":Telescope buffers<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
