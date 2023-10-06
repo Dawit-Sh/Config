@@ -57,6 +57,12 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 
+-- VimWiki
+keymap("n", "<leader>r", ":VimwikiRebuildTags<CR>")
+
+-- Goyo 
+keymap("n", "<leader>g", ":Goyo<CR>", opts)
+
 -- NvimTree
 keymap("n", "<leader>s", ":NvimTreeToggle<CR>", opts)
 

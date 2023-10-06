@@ -102,6 +102,7 @@ return packer.startup(function(use)
 
   -- Git
   use { "lewis6991/gitsigns.nvim" }
+  use { 'f-person/git-blame.nvim' }
 
   -- DAP
   use { "mfussenegger/nvim-dap" }
@@ -163,7 +164,9 @@ return packer.startup(function(use)
         ['.mdown'] = 'markdown',
       }
     end
-  }  
+  } 
+  -- Writing 
+  use { "junegunn/goyo.vim" }
   -- git lense 
   -- use { "Eliot00/git-lens.vim" }
 
