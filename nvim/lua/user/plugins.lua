@@ -194,7 +194,25 @@ vim.opt.conceallevel=3
 
 
   -- Writing 
-  use { "junegunn/goyo.vim" }
+  use { 
+    "junegunn/goyo.vim", 
+    config = function()
+    vim.cmd([[
+      function! s:goyo_enter()
+        set linebreak
+        set spell spelllang=en_us
+      endfunction
+
+      function! s:goyo_leave()
+        set nolinebreak
+        set nospell
+      endfunction
+
+      autocmd! User GoyoLeave nested call <SID>goyo_leave()
+      autocmd! User GoyoEnter nested call <SID>goyo_enter()
+    ]])
+  end, 
+  }
   -- git lense 
   -- use { "Eliot00/git-lens.vim" }
 
