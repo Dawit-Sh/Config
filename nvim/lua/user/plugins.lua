@@ -173,7 +173,7 @@ return packer.startup(function(use)
         require('neorg').setup {
             load = {
                 ["core.summary"] = {}, -- to generate summary 
-                ["core.export.markdown"] = {}, 
+                ["core.export"] = {}, 
                 ["core.defaults"] = {}, -- Loads default behaviour
                 ["core.concealer"] = {}, -- Adds pretty icons to your documents
                 ["core.dirman"] = { -- Manages Neorg workspaces
