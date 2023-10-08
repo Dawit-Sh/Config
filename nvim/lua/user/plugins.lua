@@ -213,6 +213,11 @@ vim.opt.conceallevel=3
     ]])
   end, 
   }
+  -- file management
+   use {
+      'stevearc/oil.nvim',
+      config = function() require('oil').setup() end
+    }
   -- git lense 
   -- use { "Eliot00/git-lens.vim" }
 

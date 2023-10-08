@@ -58,8 +58,8 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 
--- VimWiki
-keymap("n", "<leader>r", ":VimwikiRebuildTags<CR>")
+-- Oil Nim 
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Goyo 
 keymap("n", "<leader>g", ":Goyo<CR>", opts)
