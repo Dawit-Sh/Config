@@ -218,8 +218,6 @@ vim.opt.conceallevel=3
       'stevearc/oil.nvim',
       config = function() require('oil').setup() end
     }
-  -- git lense 
-  -- use { "Eliot00/git-lens.vim" }
 
  -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
