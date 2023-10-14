@@ -60,7 +60,6 @@ return packer.startup(function(use)
   --use { "lukas-reineke/indent-blankline.nvim" }
   use { "goolord/alpha-nvim" }
   use { "windwp/nvim-ts-autotag" }
-  use { "theprimeagen/harpoon" }
   use { "mbbill/undotree" }
   use { "junegunn/fzf.vim" }
   use { "junegunn/fzf" }
@@ -129,6 +128,7 @@ return packer.startup(function(use)
   use {'othree/html5.vim'} 
   use {'evanleck/vim-svelte'}
   use {'leafOfTree/vim-svelte-plugin'}
+  use {'mattn/emmet-vim'}
 
   -- java and spring
   use { 'mfussenegger/nvim-jdtls' }
