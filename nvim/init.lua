@@ -27,3 +27,6 @@ require "user.formatter"
 require "user.prettier"
 require "user.null_ls"
 require "lspconfig".svelte.setup{}
+
+-- require bug fixes (Optional) 
+require "user.fixes"
