@@ -61,8 +61,8 @@ return packer.startup(function(use)
   use { "goolord/alpha-nvim" }
   use { "windwp/nvim-ts-autotag" }
   use { "mbbill/undotree" }
-  use { "junegunn/fzf.vim" }
-  use { "junegunn/fzf" }
+--  use { "junegunn/fzf.vim" }
+--  use { "junegunn/fzf" }
 
   -- Colorschemes
   use { "EdenEast/nightfox.nvim" }
@@ -149,24 +149,6 @@ return packer.startup(function(use)
   use { 'nvim-pack/nvim-spectre' }
 
   -- note taking 
--- use {
---    'vimwiki/vimwiki',
---    config = function()
---      vim.g.vimwiki_list = {
---        {
---          path = '~/vimwiki/',
---          syntax = 'markdown',
---          ext  = '.md',
---        }
---      }
---      vim.g.vimwiki_ext2syntax = {
---        ['.md'] = 'markdown',
---        ['.markdown'] = 'markdown',
---        ['.mdown'] = 'markdown',
---      }
---    end
---  } 
-
   use {
     "nvim-neorg/neorg",
     config = function()
