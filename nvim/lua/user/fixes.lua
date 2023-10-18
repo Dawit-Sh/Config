@@ -6,3 +6,15 @@
 -- Fix for  statusline disappears a split second after a startup
 vim.opt.cmdheight = 1
 
+-- Neorg auto save 
+vim.api.nvim_create_autocmd("FileType", {pattern = "norg", command = "set awa"})
+
+-- Fixes neovim fold issues 
+vim.cmd([[
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+]])
+
