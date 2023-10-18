@@ -64,8 +64,10 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Plugins --
--- Emmet vim
-vim.g.user_emmet_leader_key = "<C-e>" -- ctrl+y followed by , 
+
+--  Neorg 
+keymap("n", "<S-i>", ":Neorg index<CR>")
+
 -- Oil Nim 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
