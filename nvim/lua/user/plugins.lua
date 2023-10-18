@@ -128,11 +128,9 @@ return packer.startup(function(use)
   use {'othree/html5.vim'} 
   use {'evanleck/vim-svelte'}
   use {'leafOfTree/vim-svelte-plugin'}
-  use {'mattn/emmet-vim'}
 
   -- java and spring
   use { 'mfussenegger/nvim-jdtls' }
-  use { 'mfussenegger/nvim-dap' }
   use { 'folke/trouble.nvim' }
 
   -- transparency
@@ -140,12 +138,10 @@ return packer.startup(function(use)
   
   -- linting
   use('MunifTanjim/prettier.nvim')
-  use { 'jose-elias-alvarez/null-ls.nvim'}
   use { 'MunifTanjim/eslint.nvim'}
   use { "elentok/format-on-save.nvim" }
   
   -- refactoring 
-  use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-pack/nvim-spectre' }
 
   -- note taking 
