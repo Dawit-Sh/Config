@@ -32,7 +32,9 @@ $ ./VimlikeMe.sh
 Make sure to remove or backup your current `nvim` directory
 
 ```sh
-git clone https://github.com/LunarVim/Launch.nvim.git ~/.config/nvim
+git clone https://github.com/Dawit-Sh/Config.git 
+cd Config 
+mv ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed
