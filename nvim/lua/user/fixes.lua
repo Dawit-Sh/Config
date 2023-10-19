@@ -11,7 +11,9 @@ vim.api.nvim_create_autocmd("FileType", {pattern = "norg", command = "set awa"})
 
 -- Fixes neovim fold issues 
 vim.cmd ([[
-au BufWritePost,BufLeave,WinLeave ?* mkview " 1
-au BufWinEnter ?* silent! loadview 1
+augroup remember_folds
+  autocmd!
+  au BufWinLeave ?* mkview 1
+  au BufWinEnter ?* silent! loadview 1
+augroup END
 ]])
-
