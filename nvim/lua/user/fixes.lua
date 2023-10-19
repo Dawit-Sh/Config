@@ -8,6 +8,7 @@ vim.opt.cmdheight = 1
 
 -- Neorg auto save 
 vim.api.nvim_create_autocmd("FileType", {pattern = "norg", command = "set awa"})
+vim.opt.conceallevel=3
 
 -- Fixes neovim fold issues 
 vim.cmd ([[

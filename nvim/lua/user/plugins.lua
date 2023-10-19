@@ -1,178 +1,155 @@
 local fn = vim.fn
 
--- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
+-- Automatically install lazy
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
     "git",
     "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-  print "Installing packer close and reopen Neovim..."
-  vim.cmd [[packadd packer.nvim]]
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
+--vim.cmd [[
+--  augroup packer_user_config
+--    autocmd!
+--    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--  augroup end
+--]]
 
--- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
-end
-
--- Have packer use a popup window
-packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
-  git = {
-    clone_timeout = 300, -- Timeout, in seconds, for git clones
-  },
-}
 
 -- Install your plugins here
-return packer.startup(function(use)
+require('lazy').setup({ 
   -- My plugins here
-  use { "wbthomason/packer.nvim" } -- Have packer manage itself
-  use { "nvim-lua/plenary.nvim" } -- Useful lua functions used by lots of plugins
-  use { "windwp/nvim-autopairs" } -- Autopairs, integrates with both cmp and treesitter
-  use { "numToStr/Comment.nvim" }
-  use { "JoosepAlviste/nvim-ts-context-commentstring" }
-  use { "kyazdani42/nvim-web-devicons" }
-  use { "kyazdani42/nvim-tree.lua" }
-  use { "akinsho/bufferline.nvim"}
-  use { "moll/vim-bbye" }
-  use { "nvim-lualine/lualine.nvim" }
-  use { "akinsho/toggleterm.nvim" }
-  use { "ahmedkhalf/project.nvim" }
-  use { "lewis6991/impatient.nvim" }
-  --use { "lukas-reineke/indent-blankline.nvim" }
-  use { "goolord/alpha-nvim" }
-  use { "windwp/nvim-ts-autotag" }
-  use { "mbbill/undotree" }
---  use { "junegunn/fzf.vim" }
---  use { "junegunn/fzf" }
+  'nvimdev/lspsaga.nvim',
+  'mfussenegger/nvim-lint',
+  'folke/neodev.nvim', 
+  'nvim-lua/plenary.nvim', -- Useful lua functions used by lots of plugins
+  'windwp/nvim-autopairs',    -- Autopairs, integrates with both cmp and treesitter
+  'numToStr/Comment.nvim',
+  'JoosepAlviste/nvim-ts-context-commentstring',
+  'kyazdani42/nvim-web-devicons',
+  'kyazdani42/nvim-tree.lua',
+  'akinsho/bufferline.nvim',
+  'moll/vim-bbye',
+  'nvim-lualine/lualine.nvim',
+  'akinsho/toggleterm.nvim',
+  'ahmedkhalf/project.nvim',
+  'goolord/alpha-nvim',
+  'windwp/nvim-ts-autotag',
+  'mbbill/undotree',
 
   -- Colorschemes
-  use { "EdenEast/nightfox.nvim" }
-  use { "folke/tokyonight.nvim" }
-  use { "lunarvim/darkplus.nvim" }
-  use { "ellisonleao/gruvbox.nvim" }
-  use { "rebelot/kanagawa.nvim" }
+   'EdenEast/nightfox.nvim',
+   'folke/tokyonight.nvim',
+   'lunarvim/darkplus.nvim',
+   'ellisonleao/gruvbox.nvim',
+   'rebelot/kanagawa.nvim',
 
   -- cmp plugins
-  use { "hrsh7th/nvim-cmp"} -- The completion plugin
-  use { "hrsh7th/cmp-buffer" } -- buffer completions
-  use { "hrsh7th/cmp-path"} -- path completions
-  use { "saadparwaiz1/cmp_luasnip"} -- snippet completions
-  use { "hrsh7th/cmp-nvim-lsp"}
-  use { "hrsh7th/cmp-nvim-lua"}
+   'hrsh7th/nvim-cmp', -- The completion plugin
+   'hrsh7th/cmp-buffer', -- buffer completions
+   'hrsh7th/cmp-path', -- path completions
+   'saadparwaiz1/cmp_luasnip', -- snippet completions
+   'hrsh7th/cmp-nvim-lsp',
+   'hrsh7th/cmp-nvim-lua',
 
   -- snippets
-  use { "L3MON4D3/LuaSnip" } --snippet engine
-  use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
+   'L3MON4D3/LuaSnip', --snippet engine
+   'rafamadriz/friendly-snippets', -- a bunch of snippets to 
 
   -- LSP
-  -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
-  use { "neovim/nvim-lspconfig" } -- enable LSP
-  use { "williamboman/mason.nvim" }
-  use { "williamboman/mason-lspconfig.nvim" }
-  use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
-  use { "RRethy/vim-illuminate" }
-  use { 'mhartington/formatter.nvim' }
+  --  { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to  language server installer
+   'neovim/nvim-lspconfig', -- enable LSP
+   'williamboman/mason.nvim',
+   'williamboman/mason-lspconfig.nvim',
+   'jose-elias-alvarez/null-ls.nvim', -- for formatters and linters
+   'RRethy/vim-illuminate',
+   'mhartington/formatter.nvim',
   
   -- Telescope
-  use { "nvim-telescope/telescope.nvim" }
+   'nvim-telescope/telescope.nvim',
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter"
-  }
+   'nvim-treesitter/nvim-treesitter',
 
   -- Git
-  use { "lewis6991/gitsigns.nvim" }
-  use { 'f-person/git-blame.nvim' }
+   'lewis6991/gitsigns.nvim',
+   'f-person/git-blame.nvim',
 
   -- DAP
-  use { "mfussenegger/nvim-dap" }
-  use { "rcarriga/nvim-dap-ui"  }
-  use { "ravenxrz/DAPInstall.nvim" }
+   'mfussenegger/nvim-dap',
+   'rcarriga/nvim-dap-ui',
+   'ravenxrz/DAPInstall.nvim',
 
   -- language
-  use { "ianks/vim-tsx" }
-  use { "pangloss/vim-javascript" }
-  use { "peitalin/vim-jsx-typescript" }
-  use { "leafgarland/typescript-vim" }
-  use { "styled-components/vim-styled-components" }
-  use {'neoclide/coc.nvim', branch = 'release'} 
-  use { "wakatime/vim-wakatime" }
-  use { "josa42/coc-go" }
-  use { "pantharshit00/coc-prisma" }
-  use { "prisma/vim-prisma" }
-  use { 'dart-lang/dart-vim-plugin' }
-  use { 'thosakwe/vim-flutter' }
-  use { 'natebosch/vim-lsc' }
-  use { 'natebosch/vim-lsc-dart'}
-  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end} 
-  use {'othree/html5.vim'} 
-  use {'evanleck/vim-svelte'}
-  use {'leafOfTree/vim-svelte-plugin'}
+   'ianks/vim-tsx',
+   'pangloss/vim-javascript',
+   'peitalin/vim-jsx-typescript',
+   'leafgarland/typescript-vim',
+   'styled-components/vim-styled-components',
+   {'neoclide/coc.nvim', branch = 'release'}, 
+   'wakatime/vim-wakatime',
+   'josa42/coc-go',
+   'pantharshit00/coc-prisma',
+   'prisma/vim-prisma',
+   'dart-lang/dart-vim-plugin',
+   'thosakwe/vim-flutter',
+   'natebosch/vim-lsc',
+   'natebosch/vim-lsc-dart',
+   {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}, 
+   'othree/html5.vim',
+   'evanleck/vim-svelte',
+   'leafOfTree/vim-svelte-plugin',
 
   -- java and spring
-  use { 'mfussenegger/nvim-jdtls' }
-  use { 'folke/trouble.nvim' }
+   'mfussenegger/nvim-jdtls',
+   'folke/trouble.nvim',
 
   -- transparency
-  use { "xiyaowong/transparent.nvim" }
+   'xiyaowong/transparent.nvim',
   
   -- linting
-  use('MunifTanjim/prettier.nvim')
-  use { 'MunifTanjim/eslint.nvim'}
-  use { "elentok/format-on-save.nvim" }
+  'MunifTanjim/prettier.nvim',
+   'MunifTanjim/eslint.nvim',
+   'elentok/format-on-save.nvim',
   
   -- refactoring 
-  use { 'nvim-pack/nvim-spectre' }
+   'nvim-pack/nvim-spectre',
 
   -- note taking 
-  use {
-    "nvim-neorg/neorg",
-    config = function()
-        require('neorg').setup {
-            load = {
-                ["core.summary"] = {}, -- to generate summary 
-                ["core.export"] = {}, 
-                ["core.defaults"] = {}, -- Loads default behaviour
-                ["core.concealer"] = {}, -- Adds pretty icons to your documents
-                ["core.dirman"] = { -- Manages Neorg workspaces
-                    config = {
-                        workspaces = {
-                            notes = "~/notes",
-                        },
-                        default_workspace = "notes",
-                    },
-                },
+{
+  "nvim-neorg/neorg",
+  build = ":Neorg sync-parsers",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  config = function()
+    require("neorg").setup {
+      load = {
+        ["core.defaults"] = {}, -- Loads default behaviour
+        ["core.export"] = {}, 
+        ["core.concealer"] = {}, -- Adds pretty icons to your documents
+        ["core.dirman"] = { -- Manages Neorg workspaces
+          config = {
+            workspaces = {
+              notes = "~/notes",
             },
-        }
-    end,
-    run = ":Neorg sync-parsers",
-    requires = "nvim-lua/plenary.nvim",
-}
-vim.opt.conceallevel=3
-
-
+            default_workspace = "notes",
+          },
+        },
+      },
+    }
+  end,
+},
   -- Writing 
-  use { 
+   { 
     "junegunn/goyo.vim", 
     config = function()
     vim.cmd([[
@@ -190,16 +167,10 @@ vim.opt.conceallevel=3
       autocmd! User GoyoEnter nested call <SID>goyo_enter()
     ]])
   end, 
-  }
+  },
   -- file management
-   use {
+    {
       'stevearc/oil.nvim',
       config = function() require('oil').setup() end
-    }
-
- -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
-end)
+    },
+})

@@ -1,4 +1,3 @@
-require "user.impatient"
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -12,7 +11,7 @@ require "user.treesitter"
 require "user.autopairs"
 require "user.autotag"
 require "user.comment"
---require "user.nvim-tree"
+require "user.mason"
 require "nvim-tree".setup()
 require "user.bufferline"
 require "user.lualine"
