@@ -42,12 +42,15 @@ else
   case "$prog" in
     1) 
       nvim
+      Base_Prog
       ;;
     2) 
       zsh  
+      Base_Prog
       ;;
     3) 
       kitty 
+      Base_Prog
       ;;
     *)
       echo "${BIRed}Invalid choice please try again!!${Color_Off}"
