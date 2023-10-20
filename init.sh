@@ -17,7 +17,7 @@ Color_Off='\033[0m'       # Text Reset
 # Functions to run 
 
 Base_Prog(){ 
-  sudo zypper -y git ripgrep gcc gcc-c++ >> Install.log 
+  sudo zypper -y ripgrep gcc gcc-c++ >> Install.log 
   rm -r Install.log 
 }
 
