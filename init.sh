@@ -17,7 +17,7 @@ Color_Off='\033[0m'       # Text Reset
 # Functions to run 
 
 Base_Prog(){ 
-  sudo zypper -y ripgrep gcc gcc-c++ >> Install.log 
+  sudo zypper -y neovim kitty zsh ripgrep gcc gcc-c++ >> Install.log 
   rm -r Install.log 
 }
 
@@ -25,15 +25,17 @@ nvim(){
   mv nvim ~/.config/    
 }
 zsh(){
+  chsh -s /bin/bash 
+  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
   mv .zshrc ~/ 
 }
 kitty(){
 mv kitty ~/.config/    
 }
 
-
+Base_Prog 
 echo -e "${BIGreen}Please Choose What to Install${Color_Off}"
-read -p "${BIGreen}1.Neovim\n2.zsh\n3.Kitty"${Color_Off}" prog 
+read -p "${BIGreen}1.Neovim\n2.zsh\n3.Kitty\n4.All${Color_Off}" prog 
 
 if [[ -z $prog ]]
 then 
@@ -42,16 +44,17 @@ else
   case "$prog" in
     1) 
       nvim
-      Base_Prog
       ;;
     2) 
       zsh  
-      Base_Prog
       ;;
     3) 
       kitty 
-      Base_Prog
       ;;
+    4) 
+      nvim
+      zsh
+      kitty
     *)
       echo "${BIRed}Invalid choice please try again!!${Color_Off}"
       ;;
