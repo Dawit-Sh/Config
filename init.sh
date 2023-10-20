@@ -55,8 +55,9 @@ else
       nvim
       zsh
       kitty
+      ;;
     *)
-      echo "${BIRed}Invalid choice please try again!!${Color_Off}"
+      echo -e "${BIRed}Invalid choice please try again!!${Color_Off}"
       ;;
   esac
 fi 
