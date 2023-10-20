@@ -33,7 +33,9 @@ kitty(){
 mv kitty ~/.config/    
 }
 
+echo -e "${BIRed}Installing Base Programs${Color_Off}"
 Base_Prog 
+sleep .5s 
 echo -e "${BIGreen}Please Choose What to Install${Color_Off}"
 echo -e "${BIGreen}1.Neovim\n2.zsh\n3.Kitty\n4.All${Color_Off}" 
 read prog 
