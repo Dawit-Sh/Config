@@ -1,0 +1,20 @@
+{
+  "generalSettings": "",
+  "apiKey": "ee8b67c5-524f-49f4-918b-60b5a165ce22",
+  "filter": "advanced",
+  "customQuery": "label:\"Send to logseq\"",
+  "frequency": "0",
+  "graph": "Notes",
+  "syncAt": "2023-10-20T01:21:53",
+  "highlightOrder": "the location of highlights in the article",
+  "isSinglePage": true,
+  "pageName": "Omnivore imports",
+  "articleTemplate": "###[{{{title}}}]\ncollapsed:: true\n{{#author}}\nproducer:: {{{author}}}\n{{/author}}\ninput:: [[articles]]\nlink::{{{originalUrl}}}\nsource:: [[Omnivore imports]]\ntags::",
+  "highlightTemplate": "> {{{text}}} ",
+  "advancedSettings": "",
+  "endpoint": "https://api-prod.omnivore.app/api/graphql",
+  "disabled": false,
+  "version": "v1.13.6",
+  "syncJobId": 0,
+  "loading": false
+}
