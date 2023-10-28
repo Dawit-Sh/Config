@@ -23,7 +23,7 @@ dashboard.section.buttons.val = {
   dashboard.button("q", " " .. " Quit", ":qa<CR>"),
 }
 local function footer()
-  return "Dawit-Sh"
+  return " It's Not About The Hardware You Own But The Software You Use."
 end
 
 dashboard.section.footer.val = footer()
