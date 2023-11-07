@@ -19,7 +19,8 @@
       "url": "assets:///home/nk/.logseq/plugins/logseq-monokai/custom.css",
       "description": "A dark theme for Logseq inspired by Monokai and Dracula.",
       "mode": "dark",
-      "pid": "logseq-monokai"
+      "pid": "logseq-monokai",
+      "selected": false
     }
   },
   "externals": []
