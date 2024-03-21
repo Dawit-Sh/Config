@@ -7,19 +7,19 @@
   "themes": {
     "mode": "dark",
     "light": {
-      "name": "Tenset light",
-      "url": "assets:///home/nk/.logseq/plugins/logseq-tenset-theme/tenset-theme.css",
-      "description": "Beautiful light theme made for smart contract auditors",
+      "name": "Catppuccin Latte",
+      "url": "assets:///home/nk/.logseq/plugins/logseq-catppuccin/ctp-latte.css",
+      "description": "Catppuccin Latte",
       "mode": "light",
-      "pid": "logseq-tenset-theme",
+      "pid": "logseq-catppuccin",
       "selected": false
     },
     "dark": {
-      "name": "Monokai theme",
-      "url": "assets:///home/nk/.logseq/plugins/logseq-monokai/custom.css",
-      "description": "A dark theme for Logseq inspired by Monokai and Dracula.",
+      "name": "Catppuccin Mocha",
+      "url": "assets:///home/nk/.logseq/plugins/logseq-catppuccin/ctp-mocha.css",
+      "description": "Catppuccin Mocha",
       "mode": "dark",
-      "pid": "logseq-monokai",
+      "pid": "logseq-catppuccin",
       "selected": false
     }
   },
