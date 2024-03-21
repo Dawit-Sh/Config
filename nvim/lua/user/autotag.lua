@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
   autotag = {
     enable = true,
     filetypes = { "html" , "xml" },

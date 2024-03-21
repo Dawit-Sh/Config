@@ -97,7 +97,6 @@ require('lazy').setup({
    'leafgarland/typescript-vim',
    'styled-components/vim-styled-components',
    {'neoclide/coc.nvim', branch = 'release'}, 
-   'wakatime/vim-wakatime',
    'josa42/coc-go',
    'pantharshit00/coc-prisma',
    'prisma/vim-prisma',
