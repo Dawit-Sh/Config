@@ -53,8 +53,9 @@ require('lazy').setup({
    'lunarvim/darkplus.nvim',
    'ellisonleao/gruvbox.nvim',
    'rebelot/kanagawa.nvim',
+   'nvim-tree/nvim-web-devicons',
 
-  -- cmp plugins
+   -- cmp plugins
    'hrsh7th/nvim-cmp', -- The completion plugin
    'hrsh7th/cmp-buffer', -- buffer completions
    'hrsh7th/cmp-path', -- path completions
